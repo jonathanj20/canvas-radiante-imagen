@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="miCanvas" width="400" height="400"></canvas>
+    <style>
+        #miCanvas{
+            background-color: #b3bdd5;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        const canvas = document.getElementById('miCanvas');
+        const ctx = canvas.getContext('2d');
+
+        //creamos el gradiante
+        const grd = ctx.createLinearGradient(0, 75, 300, 0);
+        grd.addColorStop(0.2, '#4779f2');
+        grd.addColorStop(0.5, '#f2ec47');
+        grd.addColorStop(1, "#47f2c5");
+
+
+        //dibujamos el rectangulo
+        ctx.fillStyle = grd;
+        ctx.fillRect(40,140,300,150);
+    </script>
+</body>
+</html>
