@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <canvas id="miCanvas" width="400" height="400"></canvas>
+    <canvas id="miCanvas" width="600" height="600"></canvas>
     <style>
         #miCanvas{
             background-color: #b3bdd5;
@@ -27,6 +27,15 @@
         //dibujamos el rectangulo
         ctx.fillStyle = grd;
         ctx.fillRect(40,140,300,150);
+
+        /**Actividad 7. createRadialGradient*/
+        const grd2 = ctx.createRadialGradient(215,420,10,150,370,200);
+        grd2.addColorStop(0.2, '#4779f2');
+        grd2.addColorStop(0.5, '#f2ec47');
+        grd2.addColorStop(1, "#47f2c5");
+
+        ctx.fillStyle=grd2;
+        ctx.fillRect(40,340,300,150); 
     </script>
 </body>
 </html>
